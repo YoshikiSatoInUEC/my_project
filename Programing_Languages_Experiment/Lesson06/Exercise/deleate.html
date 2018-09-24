@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function delCookie()
+      {
+      var valu;
+  var date2 = new Date();
+  
+  date2.setTime(0);
+  
+  document.cookie = ";expires="+date2.toGMTString();
+
+  location.reload();
+
+}
+
+</script>
+
+<form>
+<input type="button" value="クッキー削除" onclick="delCookie()">
+</form>

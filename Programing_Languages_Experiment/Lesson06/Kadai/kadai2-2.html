@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>課題2-2</title>
+    <script type="text/javascript">
+      var i=3,j=0;
+      <!--色を変える関数//-->
+      function setcolor(i){
+
+      switch(i){
+
+      <!--i==1(赤)のとき青に変える//--->
+      case 1:
+      document.getElementById("txt").style.color="blue";
+      i=2;
+      break;
+
+      <!--i==2(青)のとき黄色に変える//--->
+      case 2:
+      document.getElementById("txt").style.color="yellow";
+      i=3;
+      break;
+
+      <!--i==3(黄色)のとき赤に変える//-->
+      case 3:
+      document.getElementById("txt").style.color="red";
+      i=1;
+      break;
+
+      default:
+      break;
+      }
+      return i;
+}
+
+</script>
+  </head>
+
+  <body>
+    <span id="txt">This is the text</span><br/>
+    <input type="button" value="色を時間ごとにチェンジ" onclick="if(j==0)j=setInterval('i=setcolor(i);',500)" />
+    <input type="button" value="終了" onclick="clearInterval(j);j=0;">
+  </body> 

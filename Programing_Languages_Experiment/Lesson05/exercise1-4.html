@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <!--javascript//-->
+    <script type="text/javascript">
+      <!--画像を大きくする関数//-->
+    function wide_img(){
+    document.images["myImg1"].width+=10;
+    document.images["myImg1"].height+=10;
+    return;
+    }
+    </script>
+    
+  </head>
+  <body>
+    <!--イベントハンドラを使って前に宣言した関数を実行//-->
+    <img src="img1.png" name="myImg1" width="64" height="48" onclick="wide_img();" />
+  </body>
+</html>

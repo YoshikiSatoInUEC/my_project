@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>お問い合わせ | コーディング専門のFlexCoding</title>
+<meta name="Keywords" content="コーディング,専門,FlexCoding" />
+<meta name="Description" content="コーディング専門サービスならFlexCoding。お問い合わせページ" />
+<link rel="stylesheet"  href="../common/css/base.css" media="all" />
+<link rel="stylesheet"  href="../common/css/inquiry.css" media="all" />
+
+<script  src="../common/js/jquery-1.8.3.min.js"></script>
+<script  src="../common/js/jquery.smoothScroll.js"></script>
+<script  src="../common/js/jquery.tile.js"></script>
+<script  src="../common/js/jquery.rollover.js"></script>
+<script>
+	$(function(){
+		$("a img").rollover();
+	});
+</script>
+<!--[if lt IE 9]>
+<script src="../common/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body id="inquiry" class="inquiry">
+<!-- ヘッダー部分 -->
+<header id="header">
+<div class="inner">
+
+<h1 id="logo"><a href="../index.html"><img src="../common/img/logo.gif" width="164" height="53" alt="FlexCoding" /></a></h1>
+<p id="catch">コーディング専門サービスのFlexCoding。<br />
+〜WEB標準準拠の高品質ハンドコーディングをご提供します〜</p>
+
+<div id="info">
+<address>
+<dl>
+<dt>TEL:</dt><dd>050-1234-5678</dd>
+<dt>所在地:</dt><dd>東京都渋谷区青山◯−◯-◯</dd>
+</dl>
+</address>
+<dl>
+<dt>営業時間:</dt><dd>平日10:00〜19:00</dd>
+</dl>
+</div><!-- /#info -->
+
+</div><!-- /.inner -->
+</header><!-- /#header -->
+
+<!-- グローバルナビゲーション部分 -->
+<nav id="gnav">
+<ul>
+<li class="gnav01"><a href="#">ホーム</a></li>
+<li class="gnav02"><a href="#">FlexCodingについて</a></li>
+<li class="gnav03"><a href="#">コーディング代行</a></li>
+<li class="gnav04"><a href="#">セミナー・レッスン</a></li>
+<li class="gnav05"><a href="#">よくあるご質問</a></li>
+<li class="gnav06"><a href="#">お問い合わせ</a></li>
+</ul>
+</nav> <!-- /#gnav -->
+
+<!-- コンテンツ部分 -->
+<div id="contents" class="clearfix">
+
+<nav id="pankuzu">
+<ul>
+<li><a href="#">ホーム</a></li>
+<li>お問い合わせ</li>
+</ul>
+</nav>
+
+<!-- メイン部分 -->
+<section id="main">
+<h2><img src="img/hdg_inquiry.gif" width="680" height="80" alt="お問い合わせ" /></h2>
+
+<section class="sec">
+<h3 class="hdg">お電話でのお問い合わせ</h3>
+<p>お電話でのお問い合わせをご希望の方は下記までご連絡ください。</p>
+<p class="tel-area"><strong class="tel">050-1234-5678</strong>（平日10:00〜19:00）</p>
+</section><!-- /.sec -->
+
+<section class="sec">
+<h3 class="hdg">インターネットでのお問い合わせ</h3>
+<p>インターネットでのお問い合わせをご希望の方は下記フォームよりご連絡ください。</p>
+
+<form action="#" method="post" class="f-inquiry">
+<p class="attention"><strong>※全て必須項目です。</strong></p>
+<table class="f-table">
+<tr>
+<th>お名前</th>
+<td>
+<label for="f-name1">姓</label>
+<input name="f-name" type="text" id="f-name1" class="name" placeholder="山田" autofocus required />
+<label for="f-name2">名</label>
+<input name="f-name" type="text" id="f-name2" class="name" placeholder="太郎" required /></td>
+</tr>
+<tr>
+<th>ふりがな</th>
+<td>
+<label for="f-kana1">せい</label>
+<input name="f-kana1" type="text" id="f-kana1" class="name" placeholder="やまだ" required />
+<label for="f-kana2">めい</label>
+<input name="f-kana2" type="text" id="f-kana2" class="name" placeholder="たろう" required /></td>
+</tr>
+<tr>
+<th>メールアドレス</th>
+<td><input name="f-mail" type="email" class="email" placeholder="yamada@example.co.jp" required />
+<span class="note">（半角）</span></td>
+</tr>
+<tr>
+<th>お電話番号</th>
+<td><input name="f-tel" type="tel" class="tel-no" placeholder="03-1234-5678" required />
+<span class="note">（半角）</span></td>
+</tr>
+<tr>
+<th>ご職業</th>
+<td>
+<select name="f-job" required>
+<option value="" selected="selected">選択して下さい</option>
+<option value="会社員">会社員</option>
+<option value="自営・フリーランス">自営・フリーランス</option>
+<option value="役員・経営者">役員・経営者</option>
+<option value="学生">学生</option>
+<option value="主婦">主婦</option>
+<option value="その他">その他</option>
+</select></td>
+</tr>
+<tr>
+<th>お問い合わせ種類</th>
+<td>
+<input name="f-type" type="radio" value="コーディング代行について" id="f-type1" required />
+<label for="f-type1">コーディング代行について</label>
+<input name="f-type" type="radio" value="セミナー・レッスンについて" id="f-type2" required />
+<label for="f-type2">セミナー・レッスンについて</label>
+</td>
+</tr>
+<tr>
+<th>お問い合わせ内容</th>
+<td><textarea name="f-content" cols="40" rows="5" required></textarea></td>
+</tr>
+</table>
+
+<p class="submit-btn"><input type="submit" value="送信" /></p>
+
+</form>
+</section><!-- /.sec -->
+
+
+</section><!-- /#main -->
+
+<!-- サイドバー部分 -->
+<aside id="side">
+
+<div id="banner">
+<p><a href="#"><img src="../common/img/bnr_mitsumori.gif" width="180" height="90" alt="ネットでカンタン！簡易お見積もりはこちら" /></a></p>
+<p><a href="http://www.flexcoding.jp/blog/" target="_blank"><img src="../common/img/bnr_blog.gif" width="180" height="50" alt="禁断のスタッフブログ" /></a></p>
+</div><!-- /#banner -->
+</aside><!-- /#sidebar -->
+
+<p class="pagetop"><a href="#header">このページのトップヘ</a></p>
+</div><!-- /#contents -->
+
+
+<!-- フッター部分 -->
+<footer id="footer">
+<div class="inner">
+<ul>
+<li><a href="#">サイトポリシー</a></li>
+<li><a href="#">プライバシーポリシー</a></li>
+<li><a href="#">サイトマップ </a></li>
+</ul>
+
+<p id="copyright"><small>Copyright (c)  FlexCoding All Rights Reserved.</small></p>
+</div><!-- /.inner -->
+</footer> <!-- /#footer -->
+</body>
+</html>

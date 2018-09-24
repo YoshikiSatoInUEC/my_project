@@ -1,0 +1,43 @@
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>課題２−５</title>
+
+    <script type="text/javascript">
+      var s;
+    </script>
+    
+  </head>
+
+  <body>
+
+      <h1>クレタ島の風景</h1>
+    
+    <p>写真ごとに上下スクロール<br>    
+      <img src="imgGreece1.jpg"><br>
+
+      <!--ボタンを押すと次の写真へ-//-->
+      <!--firefoxでfor文は作動しないため、代わりにsetIntervalで代用//-->
+    <button onclick="s=setInterval('scrollBy(0,1);if(pageYOffset>=500) clearInterval(s)',0.01);">The next photo</button><br>
+
+    
+    <img src="imgGreece2.jpg"><br>
+
+    <!--ボタンを押すと前の写真へ//--->
+    <button onclick="s=setInterval('scrollBy(0,-1);if(pageYOffset==0) clearInterval(s)',0.01);">The previous photo</button>
+    <!--ボタンを押すと次の写真へ//-->
+    <button onclick="s=setInterval('scrollBy(0,1);if(pageYOffset>=1000) clearInterval(s)',0.01);">The next photo</button><br>
+
+    
+    <img src="imgGreece3.jpg"><br>
+    
+    <!--ボタンを押すと前の写真へ//-->
+    <button onclick="s=setInterval('scrollBy(0,-1);if(pageYOffset<=500) clearInterval(s)',0.01);">The previous photo</button><br>
+    <!--ボタンを押すと次の写真へ//-->
+    <button onclick="s=setInterval('scrollBy(0,-1);if(pageYOffset==0) clearInterval(s)',0.01);">Top</button>
+    </p>
+    
+  </body>
+</html>
+    

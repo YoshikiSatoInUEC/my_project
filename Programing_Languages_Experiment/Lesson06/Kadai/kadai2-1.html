@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>課題2-1</title>
+  </head>
+  <body>
+      <script type="text/javascript">
+	<!--全て同じ数か否か判定用の配列定義//--->
+	var a = new Array(3);
+
+	<!--表//-->
+	document.write("<table border='1'>");
+	document.write("<tr bgColor='#ccc'>");
+	<!--見出し//-->
+        for(var j=0;j<3;j++){
+			  document.write("<th>","8<sup>",j,"</sup>の位","</th>");
+			}
+	<!--表の中身//-->
+	for(var i=0;i<50;i++){
+			for(var j=0;j<3;j++)
+			a[j]=Math.floor(Math.random()*8);
+			document.write("<tr>");
+			for(var j=0;j<3;j++){
+					<!--数が同じときは赤色で//--->
+					if(a[0]==a[1] && a[1]==a[2] && a[2]==a[0]){
+					document.write("<td style='color:#f00; text-align:center'>",a[j],"</td>");	
+					<!--それ以外は黒で//-->
+				        }else{
+					document.write("<td style='text-align:center'>",a[j],"</td>");
+					}
+				}
+			document.write("</tr>");
+			}
+	document.write("</table>");
+					  
+      </script>
+  </body>
+</html>

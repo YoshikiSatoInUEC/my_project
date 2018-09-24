@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>練習３</title>
+    <script type="text/javascript">
+
+      <!--色を変えるメソッド//-->
+      function color_change(){
+      
+      if(document.fgColor=="red")
+      document.fgColor="blue";
+      else if(document.fgColor=="blue")
+      document.fgColor="yellow";
+      else if(document.fgColor=="yellow")
+      document.fgColor="red";
+   
+      }
+
+      <!--最終更新日を年、月、日にちごとにそれぞれ値を変数に代入//-->
+      var update = new Date(document.lastModified);
+      var update_year = update.getFullYear();
+      var update_month = update.getMonth()+1;
+      var update_date = update.getDate();
+      
+      window.document.write("最終更新日："+update_year+"/"+update_month+"/"+update_date);
+      document.fgColor="red";   <!--色の初期値は赤//-->
+    </script>
+  </head>
+  <body onload="n=setInterval('color_change()',1000)">
+  </body>
+</html>

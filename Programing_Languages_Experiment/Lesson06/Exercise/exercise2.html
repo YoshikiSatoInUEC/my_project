@@ -1,0 +1,17 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>練習問題2</title>
+<script type="text/javascript">
+function set_position(x,y){
+document.getElementById("txt").style.left=x;
+document.getElementById("txt").style.top=y;
+}
+</script>
+</head>
+
+<body>
+<p><span id="txt" style="position:absolute;left:200;top:300;">・</span></p>
+<a href="javascript:set_position(0,100)">文字を(0,100)に移動</a>
+<a href="javascript:set_position(100,200)">文字を(100,200)に移動</a>
+</body>

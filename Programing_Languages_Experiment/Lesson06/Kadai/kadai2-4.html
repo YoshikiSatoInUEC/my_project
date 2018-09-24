@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>課題2-4</title>
+    <script type="text/javascript">
+
+      <!--Windowを開くための関数宣言//-->
+      function createNewWindow(url){
+      var win = window.open(url,"","width=400px, height=600px,scrollbars=1");
+      return win;
+      }
+
+      <!--Windowを閉じる関数宣言//-->
+      function closeWindow(n){
+      win[n].close();
+      }
+      </script>
+      
+      
+  </head>
+  <body>
+    <script type="text/javascript">
+      
+      <!--URL格納用配列宣言//--->
+      var win = new Array(5);
+      var url = new Array(5);
+      url[0]="http://www.yahoo.co.jp/";
+      url[1]="https://www.yahoo.com/";
+      url[2]="https://tw.yahoo.com/";
+      url[3]="https://in.yahoo.com/";
+      url[4]="https://br.yahoo.com/";
+    
+    </script>
+    
+    <table border="1" rules="all" style="margin:0px auto;text-align:center;">
+      
+      <caption>世界のYahoo!サイト</caption>
+      
+      <tr style="background-color:#ccc;">
+	<th>国</th>
+	<th>URL</th>
+      </tr>
+
+      <tr>
+	<td>日本</td>
+	<td>http://www.yahoo.co.jp/
+	  <button onclick="win[0]=createNewWindow(url[0])">開く</button>
+	  <button onclick="closeWindow(0)">閉じる</button>
+	</td>
+      </tr>
+
+      <tr>
+	<td>アメリカ</td>
+	<td>https://www.yahoo.com/
+	  <button onclick="win[1]=createNewWindow(url[1])">開く</button>
+	  <button onclick="closeWindow(1)">閉じる</button>
+	</td>
+      </tr>
+
+      <tr>
+	<td>台湾</td>
+	<td>https://tw.yahoo.com/
+	  <button onclick="win[2]=createNewWindow(url[2])">開く</button>
+	  <button onclick="closeWindow(2)">閉じる</button>
+	</td>
+      </tr>
+
+      <tr>
+	<td>インド</td>
+	<td>https://in.yahoo.com/
+	  <button onclick="win[3]=createNewWindow(url[3])">開く</button>
+	  <button onclick="closeWindow(3)">閉じる</button>
+	</td>
+      </tr>
+
+      <tr>
+	<td>ブラジル</td>
+	<td>https://br.yahoo.com/
+	  <button onclick="win[4]=createNewWindow(url[4])">開く</button>
+	  <button onclick="closeWindow(4)">閉じる</button>
+	</td>
+    </table>
+  </body>
+</html>

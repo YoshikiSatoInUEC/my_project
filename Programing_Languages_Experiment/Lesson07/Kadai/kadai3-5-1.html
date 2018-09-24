@@ -1,0 +1,34 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>課題３−５/ブックマーク集</title>
+    <script type="text/javascript">
+      <!--pageを変える関数-->
+      function pageChange(){
+      var i;
+      <!--全て調べてcheckされている項目があればそれをlocationに代入する。-->
+      for(i=0;i<5;i++){
+		  if(document.bookmark.elements[i].checked)
+		  location=document.bookmark.elements[i].value;
+	}
+}
+    </script>    
+  </head>
+
+  <body>
+    <h1>ブックマーク集</h1>
+    <p>項目を選択して、”ページへ飛ぶ”ボタンを選択</p>
+    
+    <form name="bookmark">
+      <input type="radio" name="bkm" value="http://www.yahoo.co.jp/">Yahoo!Japan<br>
+      <input type="radio" name="bkm" value="https://www.google.co.jp/">Google<br> 
+      <input type="radio" name="bkm" value="http://www.uec.ac.jp/">電気通信大学<br>
+      <input type="radio" name="bkm" value="http://www.uec.ac.jp/ies/j/">総合情報学科<br>
+      <input type="radio" name="bkm" value="http://www.ied.ice.uec.ac.jp/">IED<br>
+      <input type="button" value="ページへ飛ぶ" onclick="pageChange()">
+    </form>
+    <input type="button" value="閉じる" onclick="window.close()">
+    
+  </body>
+</html>

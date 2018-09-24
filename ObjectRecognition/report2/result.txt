@@ -1,0 +1,14 @@
+n = 50
+>> list_P=textread('list_P.txt','%s');
+>> list_N=textread('list_N.txt','%s');
+>> model = learner(list_P,list_N);
+>> list_val = textread('list.txt','%s');
+>> Valuer(list_val,model);
+
+n = 25
+>> list_P=textread('list_P.txt','%s');
+>> list_N=textread('list_N.txt','%s');
+>> list_P = list_P(1:25,:);
+>> model = learner(list_P,list_N);
+>> list_val = textread('list.txt','%s');
+>> Valuer(list_val,model);

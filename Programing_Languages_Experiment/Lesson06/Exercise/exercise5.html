@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>練習問題５</title>
+    <script type="text/javascript">
+      function set_name(){
+      var dd,exptime,presentDay
+      
+      var u_name=prompt("お名前を入力してください","");
+      if(u_name==""){
+      set_name();
+      }
+
+      presentDay = new Date();
+      dd = presentDay.getDate();
+      dd+=1;
+      presentDay.setDate(dd);
+      exptime = presentDay.toGMTString();
+      document.cookie =u_name+ ";expires=" +exptime;
+      }
+
+    </script>
+  </head>
+  
+  <body>
+    <h1>Welcome to this page!</h1>
+    <script type="text/javascript">
+      var userName=document.cookie;
+      if(userName=="")
+      set_name();
+      document.write(document.cookie+"さん，閲覧ありがとうございます．");
+      </script>
+  </body>
+</html>

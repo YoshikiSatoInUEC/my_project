@@ -1,0 +1,31 @@
+<html>
+  
+  <head>
+    <title>課題３−５</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      <!--ページを移行する関数-->
+      function changePage(){
+      var selected=document.form.pages.selectedIndex;
+      if(selected>0)<!--ページ選択以外の項目を選べばそのページに飛ぶ-->
+      window.open(document.form.pages.options[selected].value);
+      }
+      
+    </script>
+  </head>
+
+  <body>
+    <h1>Welcome to this Homepage!!</h1><br>
+    <h2>行きたいページを選択してください。</h2>
+
+    <form name="form">
+      <select name="pages" onchange="changePage()">
+	<option selected>ページを選択
+	<option value="./kadai3-5-1.html">ブックマーク集
+	<option value="./kadai3-5-2.html">2016年の残り時間表示ページ
+	<option value="./kadai3-5-3.html">背景色自動変更ページ
+	0<option value="./kadai3-5-4.html">ルーレット
+      </select>
+      
+    
+  </body>

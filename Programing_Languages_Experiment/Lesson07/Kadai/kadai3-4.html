@@ -1,0 +1,32 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>課題3-4</title>
+    <script type="text/javascript">
+
+      <!--色を変更する関数-->
+      function changeColor(){
+      <!--styleシートのcolor属性に対してradioボタンで選択された色を代入-->
+      document.getElementById("square").style.color=document.form.color.value;
+      }
+      
+    </script>
+  </head>
+
+  <body>
+    <span id="square">■■■■■</span>
+    <p>色の変更</p>
+    
+    <form name="form">
+      <input type="radio" name="color" value="red">赤
+      <input type="radio" name="color" value="blue">青
+      <input type="radio" name="color" value="yellow">黄
+      <input type="radio" name="color" value="black">黒
+      <input type="radio" name="color" value="green">緑<br>
+      <input type="button" onclick="changeColor()" value="文字色変更">
+    </form>
+    
+  </body>
+  
+</html>

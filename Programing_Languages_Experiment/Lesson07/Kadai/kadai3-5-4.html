@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ルーレット</title>
+    <script type="text/javascript">
+      var j1,j2,j3;
+
+      <!--まとめてsetIntervalする関数-->
+      function set_interval(){
+      j1 = setInterval("rulet('ru1')",10);
+      j2 = setInterval("rulet('ru2')",11);
+      j3 = setInterval("rulet('ru3')",9);
+      }
+
+      <!--時間差でclearIntervalする関数-->
+      function clear_interval(){
+      clearInterval(j1);
+      setTimeout("clearInterval(j2)",500);
+      setTimeout("clearInterval(j3)",1000);
+      }      
+
+      <!--0~9の範囲内でルーレットを回す関数-->
+      function rulet(ru){
+      var d = parseInt(document.getElementById(ru).innerHTML)+1;
+      if(d==10)
+      d = 0
+      document.getElementById(ru).innerHTML = d;
+      }
+    </script>
+  </head>
+  
+  <body>
+    <h1 style="text-align:center">ルーレット</h1>
+    
+    <table border="1" style="margin:0 auto;">
+      
+      <tr>
+	<td style="padding:0px 10px;text-align:center;font-size:30px;" id="ru1">0</td>
+	<td style="padding:0px 10px;text-align:center;font-size:30px" id="ru2">0</td>
+	<td style="padding:0px 10px;text-align:center;font-size:30px" id="ru3">0</td>    
+      </tr>
+    
+    </table>
+    <p style="text-align:center">
+    	  <input type="button" value="start" onclick="set_interval();"><br>
+	  <input type="button" value="stop" onclick="clear_interval();"><br>
+	  <input type="button" value="閉じる" onclick="window.close();">
+    </p>
+  </body>
+</html>

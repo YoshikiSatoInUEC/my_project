@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset = "utf-8" />
+    <title>練習問題1</title>
+    <script type="text/javascript">
+
+      function mdown(){
+      document.forms[0].elements[0].value="thank you";
+      }
+
+      function mup(){
+      document.forms[0].elements[0].value="press again";
+      }
+    </script>
+  </head>
+  <body>
+    <!--forms[0]-->
+    <form>
+      <!--elements[0]-->
+      <input type="button" onmousedown="mdown()" onmouseup="mup()" value="presss here"/>
+
+      <!--elements[0]-->
+      <input type="button" onclick="mdown()" ondblclick="mup()" value="click here" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>練習問題3</title>
+    <script type="text/javascript">
+      <!--すべてのエレメントを空にする関数-->
+      function scrclr(){
+      for(i=0;i<document.tstform.length; i++){
+        if(document.tstform.elements[i].type != "button"){
+           document.tstform.elements[i].value="";
+	   }
+	}
+      document.tstform.english.focus();
+       }
+			
+        <!--平均を計算して成績を判定する関数-->		 
+      function cave(){
+        <!--成績の平均を計算-->
+	document.tstform.tresult.value = (parseInt(document.tstform.english.value) + parseInt(document.tstform.mathmatics.value))/2;
+
+	<!--成績判定-->
+      if(document.tstform.tresult.value>=0 && document.tst.tresult.value<=100){
+        if(document.tstform.tresult.value<60){
+         document.tstform.tcmnt.value = "頑張らないと単位がとれないですよ";
+          }else if(document.tstform.tresult.value < 80){
+            document.tstform.tcmnt.value = "もう少し頑張りましょう";
+              }else{
+               document.tstform.tcmnt.value = "よくできました";
+               }
+          }else{
+	       document.tstform.tcmnt.value="0点~100点までの点数を入力してください．";
+       }
+
+
+}
+     </script>
+  </head>
+  <body onload = "scrclr()">
+    <form name = "tstform">
+      英語の点数：<input type="text" name="english" size=3 />点<br/>
+      数学の点数：<input type="text" name="mathmatics" size=3 />点<br/>
+      <input type="button" onclick = "cave()" value="平均計算" />
+      <input type="button" onclick="scrclr()" value="キャンセル" />
+      <p>
+	あなたの平均点は，<input type="text" name="tresult" size=3 />です．
+	<br />
+	コメント：<input type="text" name="tcmnt" size=60 /><br />
+    </form>
+  </body> 
+</html>

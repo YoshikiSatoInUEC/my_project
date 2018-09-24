@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+/*全体*/
+*{
+    margin:0;
+    padding:0;
+}
+
+/*全てのコンテンツ*/
+#wrap{
+    width:940px;
+    margin:30px auto;
+    background-color:#ccc;
+}
+
+/*ヘッダー*/
+#header{
+    background-color:#f00;
+    font-size:300%;
+    text-align:center;
+}
+
+/*コンテンツ１*/
+#contents1{
+    background-color:#ff0;
+    font-size:500%;
+    text-align:center;
+    width:300px;
+    float:left;
+    margin-right:20px;
+}
+
+/*コンテンツ２*/
+#contents2{
+    background-color:#0f0;
+    font-size:500%;
+    text-align:center;
+    width:300px;
+    float:left;
+}
+
+/*コンテンツ３*/
+#contents3{
+    background-color:#00f;
+    font-size:500%;
+    text-align:center;
+    width:300px;
+    float:right;
+}
+
+/*フッター*/
+#footer{
+    background-color:#f0f;
+    font-size:300%;
+    text-align:center;
+    clear:both;
+}
+

@@ -1,0 +1,34 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>課題３−５/2016年の残り時間</title>
+    <script type="text/javascript">
+
+      <!--2016年残り時間を計算数する関数-->
+      function rest(){
+      var now_time = new Date();
+      var future_time = new Date(2017,0,1)
+      var rest = future_time - now_time;
+      var rest_date = parseInt(rest/86400000); <!--残り日数-->
+      var rest_hour = parseInt((rest%86400000)/3600000); <!--残り時間-->
+      var rest_minute = parseInt((rest%3600000)/60000);  <!--残り分-->
+      var rest_second = parseInt((rest%60000)/1000);     <!--残り秒数-->
+      var answer= rest_date+"日"+rest_hour+"時間"+rest_minute+"分"+rest_second+"秒"; <!--出力する文字列代入-->
+      document.getElementById("count").innerHTML = answer;
+      }
+    </script>
+
+  </head>
+  
+  <body>
+    <h1> 2016年終了まであと<span id="count"></span></h1>
+    
+    <script type="text/javascript">
+      rest();
+      setInterval("rest()",1000);      
+    </script>
+    
+      <input type="button" value="閉じる" onclick="window.close()">
+  </body>
+</html>

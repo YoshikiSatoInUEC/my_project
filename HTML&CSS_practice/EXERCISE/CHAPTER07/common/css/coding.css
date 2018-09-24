@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+
+/* サービスの特徴
+---------------------------*/
+#method{
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+#method dl{
+    width:208px;
+    padding:5px;
+    margin-right:10px;
+    border:#ddef7c 1px solid;
+    float:left;
+    min-height:140px;
+}
+
+#method dl.last{
+    margin-right:0px;
+}
+
+#method dt{
+    padding:5px;
+    margin-bottom:2px;
+    background-color:#ddef7c;
+    color:#7a9000;
+    text-align:center;
+    font-weight:bold;
+}
+
+#method .technic{
+    padding:5px;
+    margin-bottom:10px;
+    background-color:f8ffd3;
+    color:7a9000;
+    font-size:85%;
+    line-height:1.2;
+}
+
+#method .text{
+    margin-bottom:0;
+    font-size:85%;
+    line-height:1.2;
+}
+
+/*角丸枠*/
+.r-box{
+    padding-top:10px;
+    background:url(../img/prts_r_st.gif) left top no-repeat;
+}
+
+.r-box .ed{
+    padding-bottom:10px;
+    background:url(../img/prts_r_ed.gif) left bottom no-repeat;
+}
+
+.r-box .bd{
+    padding:10px 15px;
+    background:url(../img/prts_r_bd.gif) repeat-y;
+}
+
+/*メッセージ*/
+#msg{
+    margin-bottom:50px;
+}
+
+#msg h3{
+    padding:5px 0;
+    margin-bottom:10px;
+    border-bottom:#7a9000 1px solid;
+    color:#7a9000;
+}
+
+#msg p{
+    margin-bottom:0;
+}

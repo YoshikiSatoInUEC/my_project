@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      var i=1,j;
+
+      <!--写真を別の写真へと変える関数定義//-->
+      function change_picture(i){
+      switch(i){
+
+      <!--img1の時はimg2に//-->
+      case 1:
+      document.images["myImg"].src="img2.png";
+      i=2;
+      break;
+      
+      <!--img1の時はimg2に//-->
+      case 2:
+      document.images["myImg"].src="img3.png";
+      i=3;
+      break;
+      
+      <!--img1の時はimg2に//-->
+      case 3:
+      document.images["myImg"].src="img1.png"
+      i=1;
+      break;
+      
+      default:
+      break;
+      }
+      return i;
+      }    
+    </script>
+  </head>
+  <body>
+    <p>
+      <img src="./img1.png" name="myImg"/> <br/>
+      <!--スライドショー開始ボタン：setIntervalで5秒ごとにインターバルセット//-->
+    <input type="button" value="スライドショー開始" onclick="j=setInterval('i=change_picture(i);',5000);"/>
+    <input type="button" value="スライドショー終了" onclick="clearInterval(j);"/>
+    </p>
+  </body>

@@ -1,0 +1,90 @@
+/* Transform（変形）
+---------------------------*/
+
+/*translate()*/
+
+/*scale()*/
+
+/*rotate()*/
+
+/*skew()*/
+
+
+/* Transform-Origin
+---------------------------*/
+.origin li{
+	width:30%;
+	cursor:pointer;
+}
+
+
+/* Transition
+---------------------------*/
+/*フワッと色が変わるボタン1（同時）*/
+p.btn01 a{
+	background-color:#9c9;
+	color:#fff;
+}
+
+p.btn01 a:hover{
+	background-color:#fc6;
+	color:#000;
+}
+
+/*フワッと色が変わるボタン2（背景色だけ）*/
+p.btn02 a{
+	background-color:#9c9;
+	color:#fff;
+}
+
+p.btn02 a:hover{
+	background-color:#fc6;
+	color:#000;
+}
+
+/*フワッと色が変わるボタン3（時間差）*/
+p.btn03 a{
+	background-color:#9c9;
+	color:#fff;
+
+	/*
+	-webkit-transition-property: background-color, color;
+	-webkit-transition-duration: 1s, 1s;
+	-webkit-transition-delay: 0s, 1s;
+	
+	-moz-transition-property: background-color, color;
+	-moz-transition-duration: 1s, 1s;
+	-moz-transition-delay: 0s, 1s;
+	
+	-o-transition-property: background-color, color;
+	-o-transition-duration: 1s, 1s;
+	-o-transition-delay: 0s, 1s;
+	
+	-ms-transition-property: background-color, color;
+	-ms-transition-duration: 1s, 1s;
+	-ms-transition-delay: 0s, 1s;
+	
+	transition-property: background-color, color;
+	transition-duration: 1s, 1s;
+	transition-delay: 0s, 1s;
+	*/
+}
+
+p.btn03 a:hover{
+	background-color:#fc6;
+	color:#000;
+}
+
+/*transition-timing-function*/
+
+.timing li{
+	position:relative;
+	left:0;
+}
+
+.timing:hover li{
+	left:500px;
+}
+
+
+

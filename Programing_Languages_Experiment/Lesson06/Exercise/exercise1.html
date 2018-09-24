@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+<!--(x,y)に画像を移動させる関数//-->
+function setposition(x,y){
+document.images["myImg"].style.left=x;
+document.images["myImg"].style.top=y;
+}
+</script>
+</head>
+
+<body>
+<img src="imgGreece1.jpg" name="myImg" style="position:absolute;left:200px;top:400px"/>
+<p><a href="javascript:setposition(50,100)">画像を(50,100)に移動</a></p>
+<p><a href="javascript:setposition(100,200)">画像を(100,200)に移動</a></p>
+</body>
+</html>

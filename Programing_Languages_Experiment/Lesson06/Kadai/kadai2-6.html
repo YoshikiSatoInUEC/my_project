@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>課題2-6</title>
+    <script type="text/javascript">
+
+      <!--名前、趣味をsetする関数-->
+      function set_name(){
+      var dd,exptime,presentDay,allcookie,cnt;
+      
+      <!--有効期限計算-->
+      presentDay = new Date();
+      dd = presentDay.getDate();
+      dd+=7;
+      presentDay.setDate(dd);
+      exptime = presentDay.toGMTString();
+
+      <!--入力-->
+      if(!getCookie("user")){
+      var u_name=prompt("お名前を入力してください","");
+      var fav=prompt("趣味を入力してください","");
+      cnt=1;
+ 
+      if(u_name==""){
+      set_name();
+      }
+      
+      <!--Cookieに属性を入力-->
+      document.cookie = "count="+cnt+";expires=" +exptime;
+      document.cookie = "favorite="+fav+";expires=" +exptime;
+      document.cookie = "user="+u_name+";expires=" +exptime;
+      
+      }else if(window.confirm("趣味を変更しますか？")==true){
+      var fav=prompt("趣味を入力してください","");
+      document.cookie ="favorite="+fav+";expires=" +exptime;
+      cnt=parseInt(getCookie("count"));
+      cnt++;
+      document.cookie ="count="+cnt+";expires=" +exptime;
+      }else{
+      cnt=parseInt(getCookie("count"));
+      cnt++;
+      document.cookie ="count="+cnt+";expires=" +exptime;      
+      }
+      }
+
+      <!--Cookieを取得する関数-->
+      function getCookie(attr){
+      var allcookies = document.cookie;
+      var cookie=allcookies.indexOf(attr+"=");
+      var value="";
+
+      
+      if(cookie!=-1){
+      var start = cookie+attr.length+1;<!--最初-->
+      var end = allcookies.indexOf(";",start);<!--最後-->
+      if(end==-1)
+        end=allcookies.length;
+
+      value=allcookies.substring(start,end);<!--値の部分を抜き出す-->
+    
+      value = unescape(value);<!--decode-->
+      return value;
+      }
+}
+    </script>
+  </head>
+  
+  <body>
+    <h1>Welcome to this page!</h1>
+    <script type="text/javascript">
+      var userName=document.cookie;
+      set_name();
+      document.write("氏名:"+getCookie("user")+"<br/>");
+      document.write("趣味:"+getCookie("favorite")+"<br/>");
+      document.write("訪問回数:"+getCookie("count"));
+      </script>
+  </body>
+</html>

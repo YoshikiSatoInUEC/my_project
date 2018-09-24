@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*全体*/
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/*全てのコンテンツ*/
+#wrap{
+    width:500px;
+    padding:10px;
+    margin:30px auto;
+    border:#000 2px solid;
+    background-color:#ccc;
+    position:relative;
+}
+
+/*メインコンテンツ*/
+.main{
+    background-color:white;
+    margin:10px 0px;
+    text-align:center;
+    font-size:700%;
+}
+
+/*絶対配置*/
+#pos{
+    width:15px;
+    padding:10px;
+    background-color:#f00;
+    position:absolute;
+    right:-30px;
+    top:0px;
+    z-index:-1;
+}

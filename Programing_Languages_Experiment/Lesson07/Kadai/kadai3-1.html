@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>課題3-1</title>
+   <script type="text/javascript">
+     function check_pass(){
+     if(document.form.txt.value==document.form.pass.value){
+     location.href="https://www.ied.inf.uec.ac.jp";
+     window.open(href);
+     }else{
+     window.alert("Password incorrect");
+     }
+}
+
+
+   </script>
+  </head>
+  <body>
+    <form name="form">
+      ログインID:<input type="text" name="txt" size="10"/><br />
+      パスワード:<input type="password" name="pass" size="10"/><br />
+      <input type="button" value="送信" onclick="check_pass()" />
+    </form>
+  </body>
+</html>

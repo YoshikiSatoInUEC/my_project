@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>課題2-3</title>
+    <script type="text/javascript">
+
+      <!--画像を動かす関数//-->
+      function move_img(){
+      var x=0;
+      <!--右方向に10px移動//-->
+      x = parseInt(document.images["myImg"].style.left)+10;
+      document.images["myImg"].style.left=x;
+      return x;
+      }
+
+      var j,x;
+      <!--0.1秒ごとに画像を動かし、xが400になったらストップ//-->
+      j=setInterval("x=move_img();if(x>=400) clearInterval(j)",100);
+
+
+    </script>
+  </head>
+
+  <body>
+    <img src="imgGreece1.jpg" name="myImg" style="position:absolute;left:0px;top:50px"/>
+  </body>
+</html>

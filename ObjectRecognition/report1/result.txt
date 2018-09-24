@@ -1,0 +1,52 @@
+>> pwd
+
+ans =
+
+/home2/y2014/s1410055/Desktop/Object_Recognition/last_report/report_1/imgdir_1
+
+>> list = textread('list.txt','%s');
+>> addpath('../m_file/')
+>> classify_col = color_histgram(list)
+
+classify_col =
+
+    0.8100
+
+>> classify_BoF = BoF(list)
+
+classify_BoF =
+
+    0.9500
+
+>> classify_DCNN = DCNN(list)
+
+classify_DCNN =
+
+     1
+
+
+>> pwd
+
+ans =
+
+/home2/y2014/s1410055/Desktop/Object_Recognition/last_report/report_1/imgdir_2
+
+>> list = textread('list.txt','%s');
+>> addpath('../m_file/')
+>> classify_col = color_histgram(list)
+
+classify_col =
+
+    0.6050
+
+>> classify_BoF = BoF(list)
+
+classify_BoF =
+
+    0.7200
+
+>> classify_DCNN = DCNN(list)
+
+classify_DCNN =
+
+    0.8300

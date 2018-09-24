@@ -1,0 +1,30 @@
+@charset="UTF-8";
+*{
+    margin:0px;
+    padding:0px;
+}
+
+#wrap{
+    width:500px;
+    margin:30px auto;
+    background-color:#ccc;
+    padding:10px;
+}
+
+#contents,#text{
+    background-color:white;
+    text-align:center;
+    font-size:400%;
+    margin:10px 0px;
+}
+
+#relative{
+    width:20px;
+    background-color:orange;
+    text-align:center;
+    float:right;
+    position:relative;
+    right:-30px;
+    top:0px;
+}
+
