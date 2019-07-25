@@ -10,9 +10,9 @@ browser.get('https://twitter.com/login')
 
 #ログイン
 uname_elm = browser.find_element_by_class_name('js-username-field')
-uname_elm.send_keys('mlb_yos')
+uname_elm.send_keys('y05hik1_7ru10')
 pass_elm  = browser.find_element_by_class_name('js-password-field')
-pass_elm.send_keys('')
+pass_elm.send_keys('hogehoge') //パスワードテスト
 pass_elm.submit()
 
 #ツイート
